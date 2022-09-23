@@ -3,15 +3,18 @@
  * Module dependencies.
  */
 
-var app = require('../app'); //app es una funcion de tipo midleware (codigo intermediario)
+/**var app = require('../app'); //app es una funcion de tipo midleware (codigo intermediario)
 var debug = require('debug')('prueba1:server');
 var http = require('http'); //nos ayuda a crear el archivo web
 
 /**
  * Get port from environment and store in Express.
  */
+import app from '../app';
+import debug from 'debug';
+import http from 'http';
 
-var port = normalizePort(process.env.PORT || '3000'); //El puerto por el cual nos va servir 
+const port = normalizePort(process.env.PORT || '3003'); //El puerto por el cual nos va servir 
 app.set('port', port);                                //node Se enlaza con el SO, tiene acceso a la info, 
                                                       //Env-Envairement(es una memoria) a las variables de entorno la ruta 
                                                       //port = es una variable de entorno, la cual se busca en el env
@@ -21,7 +24,7 @@ app.set('port', port);                                //node Se enlaza con el SO
  * Create HTTP server.
  */
 
-var server = http.createServer(app); //Aqui se crea el servidor, recibe una estancia en express 
+const server = http.createServer(app); //Aqui se crea el servidor, recibe una estancia en express 
 
 /**
  * Listen on provided port, on all network interfaces.
@@ -90,5 +93,5 @@ function onListening() { //servidor en modo onListening
     : 'port ' + addr.port;
     debug('Listening on ' + bind);
     let{port}=addr
-  console.log('Listening at  http://localhost: ${port}'); //Listening= le dice al servidor cuando ya estes escuchando!!!
+  console.log(`Listening at  http://localhost:${port}`); //Listening= le dice al servidor cuando ya estes escuchando!!!
 }
