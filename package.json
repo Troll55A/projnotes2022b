@@ -3,15 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-<<<<<<< HEAD
     "start": "node ./bin/www",
-    "devc":"NODE_ENV=develoment && webpack serve --config ./webpack.config.js --mode develoment",
-    "itgam":"ls"
-=======
-    "start": "node ./Server/bin/www",
+    "devc":"NODE_ENV=develoment && webpack serve --config ./webpack.config.js --mode develoment", 
     "dev": "nodemon ./Server/bin/www",
     "devb": "babel-watch ./Server/bin/www"
->>>>>>> dev
   },
   "dependencies": {
     "app-root-path": "^3.0.0",
