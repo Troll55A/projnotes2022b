@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
+    "devc":"NODE_ENV=develoment && webpack serve --config ./webpack.config.js --mode develoment",
     "itgam":"ls"
   },
   "dependencies": {
