@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "devc": "NODE_ENV=develoment && webpack serve --config ./webpack.config.js --mode develoment",
+    "devc": "NODE_ENV=develoment && webpack serve --config ./webpack.config.js --mode development",
     "dev": "nodemon ./Server/bin/www",
     "devb": "babel-watch ./Server/bin/www",
     "build": "babel ./server --out-dir dist --copy-files"
