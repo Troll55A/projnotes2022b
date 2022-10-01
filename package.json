@@ -6,7 +6,8 @@
     "start": "node ./bin/www",
     "devc": "NODE_ENV=develoment && webpack serve --config ./webpack.config.js --mode develoment",
     "dev": "nodemon ./Server/bin/www",
-    "devb": "babel-watch ./Server/bin/www"
+    "devb": "babel-watch ./Server/bin/www",
+    "build": "babel ./server --out-dir dist --copy-files"
   },
   "dependencies": {
     "app-root-path": "^3.0.0",
