@@ -21,6 +21,31 @@ devServer:{
     port:8080,
     //3.3 Definiendo el host
     host:"localhost"
+},
+//Modulo es un objeto que declara reglas, creamos un arreglo y metemos una regla
+module:{
+    rules:[
+        {
+            test:/\.js$/, //por lo tanto aplica en todos los archivos que terminan .js 
+            exclude:/(node_modules|bower_components)/, //No queremos que nos valla empaquetar estos archivos
+            use:[
+                {
+                    loader:'babel-loader',
+                    options:{
+                        presets:[
+                            '@babel/preset-env',
+                            {
+                                'modules':false,
+                                'useBuiltIns':'usage',
+                                'targets':{"chrome":"80"}, //0.25%,not dead=Quiero apuntar a todo aquel que tenga el 25% en el mercado y que no este sin mantenimiento
+                                'corejs':3 
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
 }
 }
 

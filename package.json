@@ -7,8 +7,11 @@
     "devc": "NODE_ENV=develoment && webpack serve --config ./webpack.dev.config.js --mode development",
     "dev": "nodemon ./Server/bin/www",
     "devb": "babel-watch ./Server/bin/www",
-    "build": "npm run clean && babel ./Server --out-dir dist --copy-files"
-
+    "cleans": "rm -rf dist",
+    "cleanc": "rm -f bundle.js",
+    "b:s": "npm run cleans && babel ./Server --out-dir dist --copy-files",
+    "b:c":"npm run cleanc && webpack --config ./webpack.config.js --mode production",
+    "build":"npm run b:c && npm run b:s"
   },
   "dependencies": {
     "app-root-path": "^3.0.0",
