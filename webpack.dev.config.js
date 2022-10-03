@@ -5,8 +5,6 @@ const path = require('path');
 
 //Exportamos un objeto de configuracion, que sera usado por webpack
 module.exports ={
-    //mode
-mode:'production',
 //1. El archivo de entrada o indexador
     entry: "./client/index.js",
 //2. Especificar el archivo de salida
