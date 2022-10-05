@@ -1,3 +1,4 @@
+/*
 let show = (msg="No menssage given")=>{
     console.log(msg)
 }
@@ -20,3 +21,7 @@ async function asyncCall(){
 }
 
 asyncCall();
+*/
+import './stylesheet/myStyles.css';
+import './stylesheet/style.css';
+console.log("Webpack working")

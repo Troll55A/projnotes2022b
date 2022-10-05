@@ -1,8 +1,10 @@
 //El archivo de configuracion debe usar ES5
 
 //Importar un administrador de rutas de archivos
+//const { plugin } = require('mongoose');
 const path = require('path');
-
+const MiniCssExtractPlugin =
+require('mini-css-extract-plugin');
 //Exportamos un objeto de configuracion, que sera usado por webpack
 module.exports ={
 //1. El archivo de entrada o indexador
@@ -44,9 +46,19 @@ module:{
                     }
                 }
             ]
+        },
+        {
+            test:/\.css$/,
+            use:['css-loader']
         }
     ]
-}
+},//Seccion de plugins
+plugins:[
+new MiniCssExtractPlugin({
+    filename:'stylesheet/app.css'
+})
+]
+
 }
 
 

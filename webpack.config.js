@@ -2,7 +2,8 @@
 
 //Importar un administrador de rutas de archivos
 const path = require('path');
-
+const MiniCssExtractPlugin =
+require('mini-css-extract-plugin');
 //Exportamos un objeto de configuracion, que sera usado por webpack
 module.exports ={
     //mode
