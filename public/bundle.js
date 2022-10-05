@@ -1,0 +1,1 @@
+((o="No menssage given")=>{console.log(o)})(),async function(){console.log("calling");const o=await new Promise((o=>{setTimeout((()=>{o("resolved")}),200)}));console.log(o)}();
