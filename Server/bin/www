@@ -3,10 +3,13 @@
 var app = require('../app');
 var debug = require('debug')('prueba1:server');
 var http = require('http');
-Get port from environment and store in Express.*/
+Get port from environment and store in Express.
 import app from '../app';
 import debug from 'debug';
-import http from 'http';
+import http from 'http';*/
+import app from "../app"
+var debug = require('debug')('projnotes2022b:server');
+var http = require('http');
  
 const port = normalizePort(process.env.PORT || '3003');
 

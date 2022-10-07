@@ -8,9 +8,10 @@
     "dev": "nodemon ./Server/bin/www",
     "devb": "babel-watch ./Server/bin/www",
     "cleans": "rm -rf dist",
-    "cleanc": "rm -f bundle.js",
-    "b:s": "npm run cleans && babel ./Server --out-dir dist --copy-files",
+    "cleanc": "rm -f bundle.js ./stylesheets/app.css",
+    "b:s": "npm run cleans && babel ./server --out-dir dist --copy-files",
     "b:c": "npm run cleanc && webpack --config ./webpack.config.js --mode production",
+    "itgam": "ls",
     "build": "npm run b:c && npm run b:s"
   },
   "dependencies": {
