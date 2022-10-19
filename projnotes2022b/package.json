@@ -5,7 +5,7 @@
   "scripts": {
     "start": "NODE_ENV=production node ./dist/bin/www",
     "dev": "DEBUG=projnotes2022b NODE_ENV=development nodemon --exec babel-node ./server/bin/www",
-    "devc": "NODE_ENV=development && webpack serve --config ./webpack.dev.config.js --mode development",
+    "devc": "eslint --fix ./client && NODE_ENV=development && webpack serve --config ./webpack.dev.config.js --mode development",
     "devb": "babel-watch ./server/bin/www",
     "cleans": "rm -rf dist",
     "cleanc": "rm -f ./public/bundle.js ./public/stylesheets/app.css",
@@ -26,6 +26,8 @@
     "http-errors": "~1.6.3",
     "mongoose": "^6.0.5",
     "morgan": "~1.9.1",
+    "plugin": "^0.3.3",
+    "plugins": "^0.4.2",
     "rimraf": "^3.0.2",
     "webpack": "^5.35.0",
     "webpack-dev-middleware": "^4.2.0",
