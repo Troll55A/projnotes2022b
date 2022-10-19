@@ -4,10 +4,10 @@
  * Module dependencies.
  */
 // ES5 👇
-//var app = require('../app');
+// var app = require('../app');
 // ES6 👇
 import app from "../app"
-import debug from '../services/debugLogger';
+import debug from '../services/debugLogger'
 import http from 'http';
 
 /**
@@ -93,5 +93,5 @@ function onListening() {
     : 'port ' + addr.port;
     // Desestrecuturando port de addr
     let {port} = addr
-  debug(`🎈 Listening on http://localhost:${port}`);
+  debug(`✈Listening on http://localhost:${port}`);
 }
