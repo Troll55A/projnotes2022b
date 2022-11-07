@@ -29,8 +29,8 @@ import usersRouter from './routes/users';
 // Recuperar el modo de ejecución de la app
 const nodeEnv = process.env.NODE_ENV || 'development';
 // Creando una instancia de express
+logger.info('Hola logger');
 const app = express();
-
 // Inclusion del webpack middleware
 if (nodeEnv === 'development') {
   debug('✒ Ejecutando en modo de desarrollo 👨‍💻');
