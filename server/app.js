@@ -19,13 +19,16 @@ import webpackDevMiddleware from 'webpack-dev-middleware';
 import WebpackHotMiddleware from 'webpack-hot-middleware';
 import webpackConfig from '../webpack.dev.config';
 
+// Importando el configurador de motor de plantillas
+import configTemplateEngine from './config/templateEngine';
 // Logger de la aplicación
 import logger from './config/winston';
 import debug from './services/debugLogger';
 
 // Definición de rutas
-import indexRouter from './routes/index';
-import usersRouter from './routes/users';
+
+import router from './routes/router';
+import { configure } from 'winston';
 // Recuperar el modo de ejecución de la app
 const nodeEnv = process.env.NODE_ENV || 'development';
 // Creando una instancia de express
@@ -59,7 +62,7 @@ if (nodeEnv === 'development') {
 } else {
   debug('✒ Ejecutando en modo de producción 🏭');
 }
-
+configTemplateEngine(app);
 // view engine setup
 // Configura el motor de plantillas
 // 1. Establecer donde estarán las plantillas
@@ -80,10 +83,9 @@ app.use(cookieParser());
 // Servidor de archivos estáticos
 app.use(express.static(path.join(__dirname, '..', 'public')));
 
-// Registro Rutas
-app.use('/', indexRouter);
-app.use('/index', indexRouter);
-app.use('/users', usersRouter);
+// Agregando rutas a la aplicacion
+// con el enrutador
+router.addRoutes(app);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
