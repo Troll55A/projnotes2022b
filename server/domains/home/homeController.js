@@ -10,8 +10,8 @@ const home = (req, res) => {
   // 2. Madamos a generar la vista con el Template Engine}
   res.render('home/home', viewModel);
 };
-const main = (req, res) => {
-  res.render('home/main', {});
+const about = (req, res) => {
+  res.render('home/about', {});
 };
 // Exportando el Controlador
-export default { home, main };
+export default { home, about };
