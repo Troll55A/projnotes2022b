@@ -1,3 +1,5 @@
+//Cargando las variables de entorno
+import configKeys from "../../config/configKeys";
 // Creando los Actions Methods
 // GET "/"
 // GET "/index"
@@ -10,8 +12,10 @@ const home = (req, res) => {
   // 2. Madamos a generar la vista con el Template Engine}
   res.render('home/home', viewModel);
 };
+
 const about = (req, res) => {
-  res.render('home/about', {});
+  const viewModel = {appVersion:'0.0.0'};
+  res.render('home/about', viewModel);
 };
 // Exportando el Controlador
 export default { home, about };
