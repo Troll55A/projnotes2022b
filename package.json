@@ -13,7 +13,7 @@
     "b:c": "npm run cleanc && webpack --config ./webpack.config.js --mode production",
     "itgam": "ls",
     "build": "npm run b:c && npm run b:s",
-    "w:d":"NODE_ENV=development babel-watch --watch ./server/views ./server/bin/www",
+    "w:d": "NODE_ENV=development babel-watch --watch ./server/views ./server/bin/www",
     "clean-logs": "rm -rf ./server/logs/*.log"
   },
   "dependencies": {
@@ -29,7 +29,7 @@
     "http-errors": "~1.6.3",
     "materialize": "^1.0.0",
     "materialize-css": "^1.0.0",
-    "mongoose": "^6.0.5",
+    "mongoose": "^6.7.3",
     "morgan": "~1.9.1",
     "plugin": "^0.3.3",
     "plugins": "^0.4.2",
