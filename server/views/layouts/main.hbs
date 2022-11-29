@@ -1,25 +1,14 @@
-<!DOCTYPE html>
 <html>
   <head>
     <title>{{title}}</title>
-    <link rel='shortcut icon' href='/images/favicon.ico' type='image/x-icon' />
+    <link rel='shortcut icon' href='/favicon.ico' type='image/x-icon' />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel='stylesheet' href='/stylesheets/app.css' />
   </head>
   <body>
-    <nav class="light-blue">
-{{> _navbar}}
-      <div class='container'>
-        <div class='nav-wrapper'>
-          <a href='/' class='brand-logo'></a>
-          <ul id='nav-mobile' class='right hide-on-med-and-down'>
-            <li><a href='#'>Oper 1 </a></li>
-            <li><a href='#'>Oper 2 </a></li>
-            <li><a href='#'>Oper 3 </a></li>
-          </ul>
-        </div>
-      </div>
+    <nav class="light-blue darken-4">
+      {{>_navbar}}
     </nav>
-    
     <div class='container'>
       {{{body}}}
     </div>
