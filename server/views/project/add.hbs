@@ -18,6 +18,7 @@
               type='text'
               name='name'
               id='project-name'
+                required
             />
             {{#if errorModel.nameError}}
             <span style="color:red;">{{errorModel.nameError}}</span>
@@ -28,20 +29,21 @@
               Descripción del proyecto
             </label>
             <textarea
+            
               name='description'
               class='materialize-textarea'
               id='project-description'
+            required
             ></textarea>
             {{#if errorModel.descriptionError}}
-            <span style="color:red;">{{errorModel.descriptionError}}</span>
+            <span  style="color:red;">{{errorModel.descriptionError}}</span>
             {{/if}}
           </div>
         </div>
         <div class='card-action'>
           <button
             type='submit'
-            class='blue darken-3 waves-effect waves-light btn'
-          >
+            class='blue darken-3 waves-effect waves-light btn'>
             <i class='material-icons left'>note_add</i>
             Agregar
           </button>
